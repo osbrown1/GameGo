@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Game from './Game';
 
-const gamesMerch = [
+const GameList = [
   {
     console: "PC",
     selection: [
@@ -53,6 +55,23 @@ class Games extends React.Component {
     };
   }
 
+  // function GameList(props) { 
+  //   return (
+  //     <React.Fragment>
+  //       <hr />
+  //       {props.gameList.map((game) => 
+  //         <Game 
+  //           whenGameClicked = { props.onGameSelection }
+  //           name={game.name}
+  //           console={game.console}
+  //           rating={game.rating}
+  //           id={game.id}
+  //           key={game.id} />
+  //       )}
+  //     </React.Fragment>
+  //   );
+  // }
+
   handleGameSystem = (g) => {
     this.setState({ consoleIndex: g.target.value });
   };
@@ -63,7 +82,7 @@ class Games extends React.Component {
       <h2 class="h2-body">New Games for: </h2>
       <br />
       <select
-        value={this.state.gamesIndex}
+        value={this.state.consoleIndex}
         onChange={this.handleGameSystem}
         class="fancy-btn btn-lg btn-block dropdown-toggle"
       >
@@ -75,7 +94,7 @@ class Games extends React.Component {
       <br/>
       <br/>
       <ul>
-        {gamesMerch[this.state.consoleIndex].selection.map(
+        {GameList[this.state.consoleIndex].selection.map(
           (fun) => (
             <li class="li-body">{fun}</li>
           )
@@ -85,5 +104,10 @@ class Games extends React.Component {
     );
   }
 }
+
+// GameList.propTypes = { 
+//   gameList: PropTypes.array,
+//   onGameSelection: PropTypes.func
+// };
 
 export default Games;

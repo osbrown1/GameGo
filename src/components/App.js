@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import GamesMerch from "./GamesMerch";
+import GameControl from "./GameControl";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -15,8 +15,8 @@ const App = () => {
     <React.Fragment>
       <Container>
         <Header />
+        <GameControl />
         <Row>
-          <Col><GamesMerch /></Col>
           <Col><BgAnimation /></Col>
         </Row>
       </Container>
