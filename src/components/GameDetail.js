@@ -7,7 +7,8 @@ function GameDetail(props){
   return (
     <React.Fragment>
       <h1>Game Detail</h1>
-      <h3>{game.console} - {game.names}</h3>
+      <h3>{game.console} - {game.name}</h3>
+      <p><em>{game.rating}</em></p>
       <button onClick={ props.onClickingEdit }>Update Game</button> 
       <button onClick={()=> onClickingDelete(game.id) }>Delete Game</button> 
       <hr/>

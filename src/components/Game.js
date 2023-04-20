@@ -5,7 +5,7 @@ function Game(props) {
   return (
     <React.Fragment>
       <div onClick = {() => props.whenGameClicked(props.id)}>
-        <h3>{props.console} | {props.names}</h3>
+        <h3>{props.console} | {props.name}</h3>
         <p><em>{props.rating}</em></p>
         <hr/>
       </div>
@@ -14,7 +14,7 @@ function Game(props) {
 }
 
 Game.propTypes = {
-  names: PropTypes.string,
+  name: PropTypes.string,
   console: PropTypes.string,
   rating: PropTypes.string,
   id: PropTypes.string,

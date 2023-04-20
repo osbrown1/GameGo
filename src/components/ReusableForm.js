@@ -18,7 +18,7 @@ function ReusableForm(props) {
           <br/>
           <br/>
         <textarea
-          name='review'
+          name='rating'
           placeholder='Write a review of the game' />
           <br/>
           <br/>

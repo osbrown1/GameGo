@@ -8,7 +8,7 @@ function NewGameForm(props) {
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewGameFormSubmission}
-        buttonText="Add Game" />
+        buttonText="Add Game Review" />
     </React.Fragment>
   );
 

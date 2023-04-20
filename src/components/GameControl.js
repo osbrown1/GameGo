@@ -2,12 +2,13 @@ import React from "react";
 import GameList from "./GameList";
 import GameDetail from './GameDetail';
 import EditGameForm from './EditGameForm';
-import NewGameForm from './NewGameForm';
+import NewGameForm from "./NewGameForm";
+
 
 class GameControl extends React.Component {
 
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       formVisibleOnPage: false,
       mainGameList: [],
@@ -74,7 +75,7 @@ class GameControl extends React.Component {
     } else if (this.state.selectedGame != null) {
       currentlyVisibleState = 
       <GameDetail 
-      ticket = {this.state.selectedGame} 
+      game = {this.state.selectedGame} 
       onClickingDelete = {this.handleDeleteingGame} 
       onClickingEdit = {this.handleEditClick} />
       buttonText = "Return to Game List";
@@ -84,7 +85,7 @@ class GameControl extends React.Component {
       buttonText = "Return to Game List"; 
     } else {
       currentlyVisibleState = <GameList gameList={this.state.mainGameList} onGameSelection={this.handleChangingSelectedGame} />;
-      buttonText = "Add Game"; 
+      buttonText = "Add Game Review"; 
     }
     return (
       <React.Fragment>
